@@ -1,0 +1,32 @@
+{
+  "name": "bun-examples-all",
+  "private": false,
+  "version": "0.0.1665689757552",
+  "description": "All bun-examples",
+  "examples": {
+    "@bun-examples/blank": {
+      "version": "0.0.25",
+      "description": ""
+    },
+    "@bun-examples/bun-bakery": {
+      "version": "1.0.26",
+      "description": ""
+    },
+    "@bun-examples/discord-interactions": {
+      "version": "0.0.31",
+      "description": ""
+    },
+    "@bun-examples/hono": {
+      "version": "1.0.20",
+      "description": ""
+    },
+    "@bun-examples/next": {
+      "version": "0.0.68",
+      "description": ""
+    },
+    "@bun-examples/react": {
+      "version": "0.1.12",
+      "description": ""
+    }
+  }
+}
