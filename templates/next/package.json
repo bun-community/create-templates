@@ -1,6 +1,6 @@
 {
   "name": "@bun-examples/next",
-  "version": "0.0.58",
+  "version": "0.0.66",
   "dependencies": {
     "next": "^12.2.0",
     "react": "^18",
