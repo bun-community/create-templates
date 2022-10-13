@@ -22,3 +22,4 @@ jobs:
         env:
           DRY_RUN: 1
           NPM_TOKEN: ${{secrets.npm_token}}
+      - run: git commit -m 'run publish' && git push
