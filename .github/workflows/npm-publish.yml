@@ -21,10 +21,11 @@ jobs:
 
       - run: npm install
 
-      - run: node publish.js
-        env:
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+      #- run: node publish.js
+      #  env:
+      #    NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - run: echo "${{ secrets.NPM_TOKEN }}"
  #     - uses: "EndBug/add-and-commit@v9"
  #       with:
  #         default_author: github_actions
