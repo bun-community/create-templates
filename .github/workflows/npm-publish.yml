@@ -23,7 +23,6 @@ jobs:
 
       - run: node publish.js
         env:
-          DRY_RUN: 1
           NPM_TOKEN: ${{secrets.npm_token}}
 
       - uses: "EndBug/add-and-commit@v9"
