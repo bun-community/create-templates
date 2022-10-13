@@ -1,6 +1,6 @@
 {
   "name": "@bun-examples/blank",
-  "version": "0.0.57",
+  "version": "0.0.59",
   "module": "src/index.js",
   "devDependencies": {
     "bun-types": "latest"
