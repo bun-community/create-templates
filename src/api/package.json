@@ -1,7 +1,0 @@
-{
-  "name": "bun-api",
-  "private": true,
-  "dependencies": {
-    "peechy": "latest"
-  }
-}
