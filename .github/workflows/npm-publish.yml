@@ -13,15 +13,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
+
       - run: npm install
+
       - run: node publish.js
         env:
           DRY_RUN: 1
           NPM_TOKEN: ${{secrets.npm_token}}
-      - uses: EndBug/add-and-commit@v9
-          with:
-            default_author: github_actions
+
+      - uses: "EndBug/add-and-commit@v9"
+        with:
+          default_author: github_actions
