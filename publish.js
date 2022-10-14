@@ -15,7 +15,7 @@ const DRY_RUN = !!process.env.DRY_RUN;
 var count = 0;
 
 const examplesFolderEntries = fs.readdirSync(
-    path.join(process.cwd(), "templates"),
+    path.join(process.cwd(), "."),
     { withFileTypes: true }
 );
 
@@ -23,7 +23,7 @@ const packageNames = [];
 
 for (let folder of examplesFolderEntries) {
     if (!folder.isDirectory()) continue;
-    const absolute = path.resolve(process.cwd(), "templates", folder.name);
+    const absolute = path.resolve(process.cwd(), ".", folder.name);
 
     let packageJSONText;
 
@@ -134,7 +134,7 @@ if (packageNames.length > 0) {
         description: "All bun-examples",
         examples: Object.fromEntries(packageNames),
     };
-    const dir = path.join(process.cwd(), "templates/bun-examples-all");
+    const dir = path.join(process.cwd(), "./bun-examples-all");
     try {
         fs.rmSync(dir, {
             recursive: true,

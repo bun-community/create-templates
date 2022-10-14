@@ -2,7 +2,7 @@
 import './polyfill.js';
 
 import path from 'node:path';
-import { BunServer, BunSlashCreator } from './bun_shim/index.js';
+import { BunServer, BunSlashCreator } from './bun_shim';
 
 const client = new BunSlashCreator({
   token: process.env.DISCORD_BOT_TOKEN,
