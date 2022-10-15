@@ -10,7 +10,10 @@
   },
   "devDependencies": {
     "bun-types": "latest",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.20"
   },
-  "module": "index.js"
+  "module": "index.js",
+  "bun-create": {
+    "start": "bun run src/index.ts"
+  }
 }
