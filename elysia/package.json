@@ -1,5 +1,5 @@
 {
-  "name": "@bun-examples/kingworld",
+  "name": "@bun-examples/elysia",
   "version": "1.0.10",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
