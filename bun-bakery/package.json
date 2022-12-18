@@ -1,5 +1,5 @@
 {
-  "version": "1.0.77",
+  "version": "1.0.79",
   "name": "@bun-examples/bun-bakery",
   "dependencies": {
     "@kapsonfire/bun-bakery": "^0.3.2"

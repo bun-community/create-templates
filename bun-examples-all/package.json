@@ -1,39 +1,39 @@
 {
   "name": "bun-examples-all",
   "private": false,
-  "version": "0.0.1670829528484",
+  "version": "0.0.1671389857974",
   "description": "All bun-examples",
   "examples": {
     "@bun-examples/bun-bakery": {
-      "version": "1.0.77",
+      "version": "1.0.79",
       "description": ""
     },
     "@bun-examples/discord-interactions": {
-      "version": "0.0.82",
+      "version": "0.0.84",
       "description": ""
     },
     "@bun-examples/elysia": {
-      "version": "1.0.12",
+      "version": "1.0.14",
       "description": ""
     },
     "@bun-examples/hono": {
-      "version": "1.0.71",
+      "version": "1.0.73",
       "description": ""
     },
     "@bun-examples/kingworld": {
-      "version": "1.0.12",
+      "version": "1.0.14",
       "description": ""
     },
     "@bun-examples/next": {
-      "version": "0.0.119",
+      "version": "0.0.121",
       "description": ""
     },
     "@bun-examples/react": {
-      "version": "0.1.63",
+      "version": "0.1.65",
       "description": ""
     },
     "@bun-examples/svelte-kit": {
-      "version": "0.0.11",
+      "version": "0.0.13",
       "description": ""
     }
   }
