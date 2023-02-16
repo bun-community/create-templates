@@ -1,6 +1,6 @@
 {
   "name": "@bun-examples/kingworld",
-  "version": "1.0.18",
+  "version": "1.0.22",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --config nodemon.json"
