@@ -1,0 +1,13 @@
+{
+  "name": "@bun-examples/stric",
+  "module": "index.ts",
+  "devDependencies": {
+    "bun-types": "^0.5.0",
+    "@types/react": "^18.0.28"
+  },
+  "type": "module",
+  "dependencies": {
+    "@stricjs/jsx": "^1.0.4",
+    "@stricjs/kit": "^1.0.3"
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "listen": {
+        "port": 8080
+    },
+    "dev": false,
+    "static": "public",
+    "page": {
+        "list": [
+            {
+                "path": "/",
+                "source": "App.tsx"
+            }
+        ]
+    }
+}
