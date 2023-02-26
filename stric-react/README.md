@@ -1,5 +1,5 @@
 ## Getting Started
-This is the project bootstrapped using `@stricjs/kit` using [React](https://reactjs.org).
+This is the project bootstrapped for using `@stricjs/kit` with [React](https://reactjs.org).
 - `index.ts`: Entry point of the project.
 - `src/pages`: All pages. Now support JSX only
 - `src/routes`: All route handlers.
