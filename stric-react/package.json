@@ -2,7 +2,7 @@
   "name": "@bun-examples/stric-react",
   "module": "index.ts",
   "devDependencies": {
-    "bun-types": "^0.5.0",
+    "bun-types": "latest",
     "@types/react": "^18.0.28"
   },
   "type": "module",
