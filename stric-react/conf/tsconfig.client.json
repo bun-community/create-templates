@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "jsx": "react-jsx",
+      "module": "None",
+      "allowUmdGlobalAccess": true,
+      "esModuleInterop": true,
+      "target": "ESNext",
+      "moduleResolution": "node",
+      "composite": true,
+      "rootDir": ".."
+    },
+    "include": [
+      "../src/pages/**/*.tsx",
+      "../src/stric-pages.d.ts"
+    ]
+  }
