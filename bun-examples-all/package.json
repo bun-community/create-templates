@@ -47,6 +47,10 @@
     "@bun-examples/websi": {
       "version": "0.1.6",
       "description": ""
+    },
+    "@bun-examples/preact": {
+      "version": "0.0.1",
+      "description": ""
     }
   }
 }
