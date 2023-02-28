@@ -7,7 +7,7 @@ This is a Preact project bootstrapped with [bun](https://bun.sh/).
 ### Cloning the repo
 
 ```sh
-bun create preact ./react-bun-app
+bun create preact ./preact-bun-app
 ```
 
 ### Development
