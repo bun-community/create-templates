@@ -1,3 +1,5 @@
-export default function App() {
-    return <p>Hello</p>;
+import { html } from "@stricjs/arrow/utils";
+
+export function render() {
+    html`<p>Hello world</p>`;
 }
