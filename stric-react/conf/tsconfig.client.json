@@ -1,6 +1,5 @@
 {
     "compilerOptions": {
-      "jsx": "react-jsx",
       "module": "None",
       "allowUmdGlobalAccess": true,
       "esModuleInterop": true,
@@ -10,7 +9,8 @@
       "rootDir": ".."
     },
     "include": [
-      "../src/pages/**/*.tsx",
-      "../src/stric-pages.d.ts"
+      "../src/pages/**/*.ts",
+      "../src/stric-pages.d.ts",
+      "../global.d.ts"
     ]
-  }
+}
