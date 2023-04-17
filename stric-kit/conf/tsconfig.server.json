@@ -18,6 +18,7 @@
     },
     "include": [
         "../src/routes",
-        "../index.ts"
+        "../index.ts",
+        "../global.d.ts"
     ]
 }
