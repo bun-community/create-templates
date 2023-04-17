@@ -1,6 +1,6 @@
 {
   "name": "@bun-examples/preact",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "type": "module",
   "devDependencies": {
     "bun-types": "^0.5.0"
