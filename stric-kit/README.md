@@ -12,4 +12,4 @@ Start the app using:
 ```bash
 bun index.ts
 ```
-App will be available at [localhost:8080](http://localhost:8080).
+App will be available at [localhost:8080](http://localhost:3000).
