@@ -1,51 +1,51 @@
 {
   "name": "bun-examples-all",
   "private": false,
-  "version": "0.0.1681741054711",
+  "version": "0.0.1682825276604",
   "description": "All bun-examples",
   "examples": {
     "@bun-examples/apollo-server": {
-      "version": "1.0.14",
+      "version": "1.0.16",
       "description": ""
     },
     "@bun-examples/bun-bakery": {
-      "version": "1.0.95",
+      "version": "1.0.97",
       "description": ""
     },
     "@bun-examples/discord-interactions": {
-      "version": "0.0.100",
+      "version": "0.0.102",
       "description": ""
     },
     "@bun-examples/elysia": {
-      "version": "1.0.30",
+      "version": "1.0.32",
       "description": ""
     },
     "@bun-examples/hono": {
-      "version": "1.0.89",
+      "version": "1.0.91",
       "description": ""
     },
     "@bun-examples/kingworld": {
-      "version": "1.0.30",
+      "version": "1.0.32",
       "description": ""
     },
     "@bun-examples/next": {
-      "version": "0.0.137",
+      "version": "0.0.139",
       "description": ""
     },
     "@bun-examples/preact": {
-      "version": "0.0.5",
+      "version": "0.0.7",
       "description": ""
     },
     "@bun-examples/react": {
-      "version": "0.1.81",
+      "version": "0.1.83",
       "description": ""
     },
     "@bun-examples/svelte-kit": {
-      "version": "0.0.27",
+      "version": "0.0.29",
       "description": ""
     },
     "@bun-examples/websi": {
-      "version": "0.1.10",
+      "version": "0.1.12",
       "description": ""
     }
   }
