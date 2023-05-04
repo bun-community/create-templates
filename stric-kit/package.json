@@ -5,7 +5,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@stricjs/arrow": "^1.2.2",
-    "@stricjs/kit": "^1.0.17"
+    "@stricjs/arrow": "~2.0.1",
+    "@stricjs/kit": "~2.0.0"
   }
 }
