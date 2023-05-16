@@ -18,7 +18,7 @@
     "typescript": "latest"
   },
   "scripts": {
-    "dev": "bun run dev.tsx"
+    "dev": "bun --watch run dev.tsx"
   },
   "bun-create": {
     "start": "bun run dev"
