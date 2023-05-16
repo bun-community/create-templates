@@ -1,5 +1,5 @@
 {
-  "version": "1.0.91",
+  "version": "1.0.93",
   "name": "@bun-examples/hono",
   "devDependencies": {
     "bun-types": "latest"
