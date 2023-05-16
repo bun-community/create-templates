@@ -7,9 +7,12 @@ This is the project bootstrapped for using `@stricjs/kit` with [ArrowJS](https:/
 - `src/stric-pages.d.ts`: The global type definitions of the pages.
 - `src/stric.config.json`: Default config for the project, will be merged with the config passed into `Stric.boot`
 
-## Development
 Start the app using:
 ```bash
-bun index.ts
+# Run in development
+bun dev
+
+# Run in production (for output minifying)
+bun prod
 ```
-App will be available at [localhost:8080](http://localhost:8080).
+App will be available at [localhost:8080](http://localhost:3000).
