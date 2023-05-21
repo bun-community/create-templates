@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "bun ./bin/www.ts",
-    "dev": "bun --watch index.ts"
+    "dev": "bun --watch ./bin/www.ts"
   },
   "bun-create": {
     "start": "bun run dev"
