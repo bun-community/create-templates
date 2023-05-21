@@ -5,7 +5,9 @@
   "version": "0.0.1",
   "devDependencies": {
     "bun-types": "^canary",
-    "@types/express": "latest"
+    "@types/express": "latest",
+    "@types/morgan": "latest",
+    "@types/cookie-parser": "latest"
   },
   "peerDependencies": {
     "typescript": "^latest"
