@@ -4,12 +4,20 @@
   "type": "module",
   "version": "0.0.1",
   "devDependencies": {
-    "bun-types": "^canary"
+    "bun-types": "^canary",
+    "@types/express": "latest"
   },
   "peerDependencies": {
     "typescript": "^latest"
   },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1"
+  },
   "scripts": {
+    "start": "bun ./bin/www.ts",
     "dev": "bun --watch index.ts"
   },
   "bun-create": {
