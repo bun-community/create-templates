@@ -1,4 +1,4 @@
-import { SlashCommand, ApplicationCommandType } from 'slash-create';
+import { SlashCommand, ApplicationCommandType } from "slash-create";
 
 export default class AvatarCommand extends SlashCommand {
   constructor(creator) {
@@ -6,7 +6,7 @@ export default class AvatarCommand extends SlashCommand {
       // You must specify a type for context menu commands, but defaults
       // to `CHAT_INPUT`, or regular slash commands.
       type: ApplicationCommandType.USER,
-      name: 'Get Avatar URL',
+      name: "Get Avatar URL",
     });
 
     this.filePath = __filename;

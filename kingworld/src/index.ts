@@ -1,7 +1,5 @@
-import KingWorld from 'kingworld'
+import KingWorld from "kingworld";
 
-new KingWorld()
-    .get("/", () => "Hello KingWorld")
-    .listen(3000)
+new KingWorld().get("/", () => "Hello KingWorld").listen(3000);
 
-console.log('🦊 KINGWORLD is running at :3000')
+console.log("🦊 KINGWORLD is running at :3000");

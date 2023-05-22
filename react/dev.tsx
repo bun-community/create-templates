@@ -11,7 +11,10 @@ await Bun.build({
   outdir: "./build",
 });
 
-function serveFromDir(config: { directory: string; path: string }): Response | null {
+function serveFromDir(config: {
+  directory: string;
+  path: string;
+}): Response | null {
   let basePath = path.join(config.directory, config.path);
   const suffixes = ["", ".html", "index.html"];
 
@@ -28,14 +31,17 @@ function serveFromDir(config: { directory: string; path: string }): Response | n
   return null;
 }
 
-export default {
+const server = Bun.serve({
   fetch(request) {
     let reqPath = new URL(request.url).pathname;
     console.log(request.method, reqPath);
     if (reqPath === "/") reqPath = "/index.html";
 
     // check public
-    const publicResponse = serveFromDir({ directory: PUBLIC_DIR, path: reqPath });
+    const publicResponse = serveFromDir({
+      directory: PUBLIC_DIR,
+      path: reqPath,
+    });
     if (publicResponse) return publicResponse;
 
     // check /.build
@@ -46,4 +52,6 @@ export default {
       status: 404,
     });
   },
-} satisfies ServeOptions;
+});
+
+console.log(`Listening on http://localhost:${server.port}`);

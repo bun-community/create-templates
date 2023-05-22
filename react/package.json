@@ -14,11 +14,12 @@
   "devDependencies": {
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
+    "@types/web": "^0.0.99",
     "bun-types": "canary",
     "typescript": "latest"
   },
   "scripts": {
-    "dev": "bun run dev.tsx"
+    "dev": "bun --watch run dev.tsx"
   },
   "bun-create": {
     "start": "bun run dev"
