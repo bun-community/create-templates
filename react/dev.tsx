@@ -1,19 +1,22 @@
-import * as path from "path";
-import { statSync } from "fs";
-import type { ServeOptions } from "bun";
+import * as path from 'path';
+import {statSync} from 'fs';
+import type {ServeOptions} from 'bun';
 
 const PROJECT_ROOT = import.meta.dir;
-const PUBLIC_DIR = path.resolve(PROJECT_ROOT, "public");
-const BUILD_DIR = path.resolve(PROJECT_ROOT, "build");
+const PUBLIC_DIR = path.resolve(PROJECT_ROOT, 'public');
+const BUILD_DIR = path.resolve(PROJECT_ROOT, 'build');
 
 await Bun.build({
-  entrypoints: ["./src/index.tsx"],
-  outdir: "./build",
+  entrypoints: ['./src/index.tsx'],
+  outdir: './build',
 });
 
-function serveFromDir(config: { directory: string; path: string }): Response | null {
+function serveFromDir(config: {
+  directory: string;
+  path: string;
+}): Response | null {
   let basePath = path.join(config.directory, config.path);
-  const suffixes = ["", ".html", "index.html"];
+  const suffixes = ['', '.html', 'index.html'];
 
   for (const suffix of suffixes) {
     try {
@@ -28,22 +31,24 @@ function serveFromDir(config: { directory: string; path: string }): Response | n
   return null;
 }
 
-export default {
+const server = Bun.serve({
   fetch(request) {
     let reqPath = new URL(request.url).pathname;
     console.log(request.method, reqPath);
-    if (reqPath === "/") reqPath = "/index.html";
+    if (reqPath === '/') reqPath = '/index.html';
 
     // check public
-    const publicResponse = serveFromDir({ directory: PUBLIC_DIR, path: reqPath });
+    const publicResponse = serveFromDir({directory: PUBLIC_DIR, path: reqPath});
     if (publicResponse) return publicResponse;
 
     // check /.build
-    const buildResponse = serveFromDir({ directory: BUILD_DIR, path: reqPath });
+    const buildResponse = serveFromDir({directory: BUILD_DIR, path: reqPath});
     if (buildResponse) return buildResponse;
 
-    return new Response("File not found", {
+    return new Response('File not found', {
       status: 404,
     });
   },
-} satisfies ServeOptions;
+});
+
+console.log(`Listening on http://localhost:${server.port}`);
