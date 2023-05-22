@@ -1,8 +1,8 @@
 // polyfill v8 and node (TODO: fix in bun)
-import './polyfill.js';
+import "./polyfill.js";
 
-import path from 'node:path';
-import { BunServer, BunSlashCreator } from './bun_shim';
+import path from "node:path";
+import { BunServer, BunSlashCreator } from "./bun_shim";
 
 const client = new BunSlashCreator({
   token: process.env.DISCORD_BOT_TOKEN,
@@ -11,10 +11,10 @@ const client = new BunSlashCreator({
 });
 
 // client.on('debug', console.log);
-client.on('error', console.error);
+client.on("error", console.error);
 
 client.withServer(new BunServer());
-await client.registerCommandsIn(path.join(__dirname, 'commands'));
+await client.registerCommandsIn(path.join(__dirname, "commands"));
 
 client.syncCommands();
 await client.server.listen(1337);

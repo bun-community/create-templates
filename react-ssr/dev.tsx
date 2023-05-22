@@ -13,7 +13,10 @@ const srcRouter = new Bun.FileSystemRouter({
 });
 
 await Bun.build({
-  entrypoints: [import.meta.dir + "/hydrate.tsx", ...Object.values(srcRouter.routes)],
+  entrypoints: [
+    import.meta.dir + "/hydrate.tsx",
+    ...Object.values(srcRouter.routes),
+  ],
   outdir: BUILD_DIR,
   target: "browser",
   splitting: true,
@@ -24,7 +27,10 @@ const buildRouter = new Bun.FileSystemRouter({
   style: "nextjs",
 });
 
-function serveFromDir(config: { directory: string; path: string }): Response | null {
+function serveFromDir(config: {
+  directory: string;
+  path: string;
+}): Response | null {
   let basePath = path.join(config.directory, config.path);
   const suffixes = ["", ".html", "index.html"];
 
@@ -57,7 +63,7 @@ export default {
       });
 
       return new Response(stream, {
-        "headers": { "Content-Type": "text/html; charset=utf-8" },
+        headers: { "Content-Type": "text/html; charset=utf-8" },
       });
     }
     let reqPath = new URL(request.url).pathname;
@@ -65,7 +71,10 @@ export default {
     if (reqPath === "/") reqPath = "/index.html";
 
     // check public
-    const publicResponse = serveFromDir({ directory: PUBLIC_DIR, path: reqPath });
+    const publicResponse = serveFromDir({
+      directory: PUBLIC_DIR,
+      path: reqPath,
+    });
     if (publicResponse) return publicResponse;
 
     // check /.build
