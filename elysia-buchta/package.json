@@ -1,0 +1,14 @@
+{
+  "name": "@bun-examples/elysia-buchta",
+  "version": "1.0.0",
+  "dependencies": {
+    "buchta-elysia-integration": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "module": "index.ts",
+  "bun-create": {
+    "start": "bun run index.ts"
+  }
+}
