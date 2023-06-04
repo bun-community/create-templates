@@ -22,8 +22,9 @@ app.set('port', port);
 
 // var server = http.createServer(app);
 const server = Bun.serve({
-  fetch: (req, res, next) => {
-    next();
+  fetch: (req, res) => {
+    // https://stackoverflow.com/questions/73903453/does-node-fetch-support-request-forwarding
+    res.pipe(req);
   },
   // Optional port number - the default value is 3000
   port
