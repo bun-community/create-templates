@@ -17,9 +17,10 @@ app.set('port', port);
  * Create HTTP server.
  */
 const server = Bun.serve({
-  fetch: (req, res) => {
-    // cf.: https://stackoverflow.com/questions/73903453/does-node-fetch-support-request-forwarding
-    res.pipe(req);
+  fetch: (req) => {
+    // https://developer.mozilla.org/en-US/docs/Web/API/Response
+    // https://developer.mozilla.org/en-US/docs/Web/API/Response/redirect_static
+    return Response.redirect(req.url);
   },
   // Optional port number - the default value is 3000
   port
