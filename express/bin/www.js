@@ -9,7 +9,6 @@ import Bun from 'bun';
 /**
  * Get port from environment and store in Express.
  */
-
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
@@ -18,13 +17,14 @@ app.set('port', port);
  */
 const server = Bun.serve({
   fetch: (req) => {
-    // https://developer.mozilla.org/en-US/docs/Web/API/Response
+    // https://bun.sh/docs/ecosystem/express
     // https://developer.mozilla.org/en-US/docs/Web/API/Response/redirect_static
     return Response.redirect(req.url);
   },
   // Optional port number - the default value is 3000
   port
 });
+
 /**
  * Listen on provided port, on all network interfaces.
  */
