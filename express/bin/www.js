@@ -3,9 +3,6 @@
 /**
  * Module dependencies.
  */
-// var app = require('../app');
-// var debug = require('debug')('express:server');
-// var http = require('http');
 import app from '../app';
 import Bun from 'bun';
 
@@ -19,11 +16,9 @@ app.set('port', port);
 /**
  * Create HTTP server.
  */
-
-// var server = http.createServer(app);
 const server = Bun.serve({
   fetch: (req, res) => {
-    // https://stackoverflow.com/questions/73903453/does-node-fetch-support-request-forwarding
+    // cf.: https://stackoverflow.com/questions/73903453/does-node-fetch-support-request-forwarding
     res.pipe(req);
   },
   // Optional port number - the default value is 3000
@@ -38,7 +33,6 @@ app.listen(port);
 /**
  * Normalize a port into a number, string, or false.
  */
-
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
