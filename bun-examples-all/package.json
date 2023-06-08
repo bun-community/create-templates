@@ -1,59 +1,59 @@
 {
   "name": "bun-examples-all",
   "private": false,
-  "version": "0.0.1684784030093",
+  "version": "0.0.1686211567332",
   "description": "All bun-examples",
   "examples": {
     "@bun-examples/apollo-server": {
-      "version": "1.0.22",
+      "version": "1.0.24",
       "description": ""
     },
     "@bun-examples/bun-bakery": {
-      "version": "1.0.103",
+      "version": "1.0.105",
       "description": ""
     },
     "@bun-examples/discord-interactions": {
-      "version": "0.0.108",
+      "version": "0.0.110",
       "description": ""
     },
     "@bun-examples/elysia": {
-      "version": "1.0.38",
-      "description": ""
-    },
-    "@bun-examples/hono": {
-      "version": "1.0.97",
-      "description": ""
-    },
-    "@bun-examples/kingworld": {
-      "version": "1.0.38",
-      "description": ""
-    },
-    "@bun-examples/next": {
-      "version": "0.0.145",
-      "description": ""
-    },
-    "@bun-examples/preact": {
-      "version": "0.0.13",
-      "description": ""
-    },
-    "@bun-examples/react": {
-      "version": "0.1.89",
-      "description": ""
-    },
-    "@bun-examples/react-ssr": {
-      "version": "0.1.87",
-      "description": ""
-    },
-    "@bun-examples/svelte-kit": {
-      "version": "0.0.35",
-      "description": ""
-    },
-    "@bun-examples/websi": {
-      "version": "0.1.18",
+      "version": "1.0.40",
       "description": ""
     },
     "@bun-examples/elysia-buchta": {
-      "version": "1.0.0",
+      "version": "1.0.2",
+      "description": ""
+    },
+    "@bun-examples/hono": {
+      "version": "1.0.99",
+      "description": ""
+    },
+    "@bun-examples/kingworld": {
+      "version": "1.0.40",
+      "description": ""
+    },
+    "@bun-examples/next": {
+      "version": "0.0.147",
+      "description": ""
+    },
+    "@bun-examples/preact": {
+      "version": "0.0.15",
+      "description": ""
+    },
+    "@bun-examples/react": {
+      "version": "0.1.91",
+      "description": ""
+    },
+    "@bun-examples/react-ssr": {
+      "version": "0.1.89",
+      "description": ""
+    },
+    "@bun-examples/svelte-kit": {
+      "version": "0.0.37",
+      "description": ""
+    },
+    "@bun-examples/websi": {
+      "version": "0.1.20",
       "description": ""
     }
   }
