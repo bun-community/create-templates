@@ -6,6 +6,9 @@ const PROJECT_ROOT = import.meta.dir;
 const PUBLIC_DIR = path.resolve(PROJECT_ROOT, "public");
 const BUILD_DIR = path.resolve(PROJECT_ROOT, "build");
 
+// rebuild if any source file changes when using --watch
+import('./src/index.tsx').catch(e => e)
+
 await Bun.build({
   entrypoints: ["./src/index.tsx"],
   outdir: "./build",
