@@ -55,6 +55,10 @@
     "@bun-examples/websi": {
       "version": "0.1.20",
       "description": ""
+    },
+    "@bun-examples/express": {
+      "version": "0.0.1",
+      "description": ""
     }
   }
 }
