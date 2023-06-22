@@ -1,6 +1,6 @@
 {
   "name": "@bun-examples/react-ssr",
-  "version": "0.1.89",
+  "version": "0.1.91",
   "dependencies": {
     "bun-types": "canary",
     "react": "next",

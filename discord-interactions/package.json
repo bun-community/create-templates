@@ -1,5 +1,5 @@
 {
-  "version": "0.0.110",
+  "version": "0.0.112",
   "name": "@bun-examples/discord-interactions",
   "dependencies": {
     "slash-create": "^5.9.0"
