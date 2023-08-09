@@ -1,30 +1,30 @@
-import * as path from "path";
-import { statSync } from "fs";
-import type { ServeOptions } from "bun";
-import { renderToReadableStream, renderToString } from "react-dom/server";
+import * as path from 'path';
+import {statSync} from 'fs';
+import type {ServeOptions} from 'bun';
+import {renderToReadableStream, renderToString} from 'react-dom/server';
 
 const PROJECT_ROOT = import.meta.dir;
-const PUBLIC_DIR = path.resolve(PROJECT_ROOT, "public");
-const BUILD_DIR = path.resolve(PROJECT_ROOT, ".build");
+const PUBLIC_DIR = path.resolve(PROJECT_ROOT, 'public');
+const BUILD_DIR = path.resolve(PROJECT_ROOT, '.build');
 
 const srcRouter = new Bun.FileSystemRouter({
-  dir: "./pages",
-  style: "nextjs",
+  dir: './pages',
+  style: 'nextjs',
 });
 
 await Bun.build({
   entrypoints: [
-    import.meta.dir + "/hydrate.tsx",
+    import.meta.dir + '/hydrate.tsx',
     ...Object.values(srcRouter.routes),
   ],
   outdir: BUILD_DIR,
-  target: "browser",
+  target: 'browser',
   splitting: true,
 });
 
 const buildRouter = new Bun.FileSystemRouter({
-  dir: BUILD_DIR,
-  style: "nextjs",
+  dir: BUILD_DIR + '/pages',
+  style: 'nextjs',
 });
 
 function serveFromDir(config: {
@@ -32,7 +32,7 @@ function serveFromDir(config: {
   path: string;
 }): Response | null {
   let basePath = path.join(config.directory, config.path);
-  const suffixes = ["", ".html", "index.html"];
+  const suffixes = ['', '.html', 'index.html'];
 
   for (const suffix of suffixes) {
     try {
@@ -53,22 +53,22 @@ export default {
     if (match) {
       const builtMatch = buildRouter.match(request);
       if (!builtMatch) {
-        return new Response("Unknown error", { status: 500 });
+        return new Response('Unknown error', {status: 500});
       }
 
       const Component = await import(match.filePath);
       const stream = await renderToReadableStream(<Component.default />, {
         bootstrapScriptContent: `globalThis.PATH_TO_PAGE = "/${builtMatch.src}";`,
-        bootstrapModules: ["/hydrate.js"],
+        bootstrapModules: ['/hydrate.js'],
       });
 
       return new Response(stream, {
-        headers: { "Content-Type": "text/html; charset=utf-8" },
+        headers: {'Content-Type': 'text/html; charset=utf-8'},
       });
     }
     let reqPath = new URL(request.url).pathname;
     console.log(request.method, reqPath);
-    if (reqPath === "/") reqPath = "/index.html";
+    if (reqPath === '/') reqPath = '/index.html';
 
     // check public
     const publicResponse = serveFromDir({
@@ -78,10 +78,10 @@ export default {
     if (publicResponse) return publicResponse;
 
     // check /.build
-    const buildResponse = serveFromDir({ directory: BUILD_DIR, path: reqPath });
+    const buildResponse = serveFromDir({directory: BUILD_DIR, path: reqPath});
     if (buildResponse) return buildResponse;
 
-    return new Response("File not found", {
+    return new Response('File not found', {
       status: 404,
     });
   },
