@@ -77,9 +77,14 @@ export default {
     });
     if (publicResponse) return publicResponse;
 
-    // check /.build
+    // check built assets
     const buildResponse = serveFromDir({directory: BUILD_DIR, path: reqPath});
     if (buildResponse) return buildResponse;
+    const pagesResponse = serveFromDir({
+      directory: BUILD_DIR + '/pages',
+      path: reqPath,
+    });
+    if (pagesResponse) return pagesResponse;
 
     return new Response('File not found', {
       status: 404,
