@@ -1,4 +1,5 @@
 {
+  "name": "@bun-examples/stric",
   "module": "index.ts",
   "devDependencies": {
     "bun-types": "latest"
