@@ -1,6 +1,6 @@
 {
   "name": "@bun-examples/svelte-kit",
-  "version": "0.0.45",
+  "version": "0.0.47",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",

@@ -12,5 +12,6 @@
   "scripts": {
     "dev": "bun index.ts",
     "prod": "NODE_ENV=production bun index.ts"
-  }
+  },
+  "version": "0.0.1"
 }

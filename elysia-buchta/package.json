@@ -1,6 +1,6 @@
 {
   "name": "@bun-examples/elysia-buchta",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "dependencies": {
     "buchta-elysia-integration": "latest"
   },

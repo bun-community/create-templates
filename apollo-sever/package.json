@@ -1,5 +1,5 @@
 {
-  "version": "1.0.32",
+  "version": "1.0.34",
   "name": "@bun-examples/apollo-server",
   "dependencies": {
     "@apollo/server": "^4.3.2",
