@@ -2,6 +2,7 @@
   "name": "@bun-examples/react",
   "version": "0.1.101",
   "dependencies": {
+    "bun-html-live-reload": "git@github.com:aabccd021/bun-html-live-reload.git",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "web-vitals": "^3.0.3"
