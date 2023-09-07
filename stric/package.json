@@ -1,0 +1,8 @@
+{
+  "name": "stric",
+  "version": "0.0.1",
+  "dependencies": {
+    "@stricjs/router": "4.1.6",
+    "@stricjs/utils": "1.4.7"
+  }
+}
