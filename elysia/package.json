@@ -9,9 +9,8 @@
     "elysia": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@types/bun": "latest"
   },
-  "module": "src/index.js",
   "bun-create": {
     "start": "bun run src/index.ts"
   }
