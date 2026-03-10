@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { serveStatic } from "hono/serve-static.bun";
+import { serveStatic } from "hono/bun";
 
 const port = parseInt(process.env.PORT) || 3000;
 
@@ -13,7 +13,4 @@ app.get("/", (c) => {
 
 console.log(`Running at http://localhost:${port}`);
 
-export default {
-  port,
-  fetch: app.fetch,
-};
+export default app;
