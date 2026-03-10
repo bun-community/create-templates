@@ -1,0 +1,152 @@
+.container {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #fff;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 999px;
+  color: #10b981;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.gradient {
+  background: linear-gradient(135deg, #10b981, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #888;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #10b981, #3b82f6);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.btnSecondary {
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.btnSecondary:hover {
+  border-color: #666;
+  transform: translateY(-2px);
+}
+
+.features {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.featureCard {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid #1a1a1a;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: border-color 0.2s, transform 0.2s;
+
+  & h3 {
+    margin: 0.75rem 0 0.5rem;
+    font-size: 1.1rem;
+    color: #fff;
+  }
+
+  & p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  &:hover {
+    border-color: #333;
+    transform: translateY(-3px);
+  }
+}
+
+.featureIcon {
+  font-size: 1.75rem;
+}
+
+.quickstart {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 2rem 6rem;
+  text-align: center;
+
+  & h2 {
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+}
+
+.code {
+  background: #000;
+  border: 1px solid #1a1a1a;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  text-align: left;
+  color: #10b981;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95rem;
+  line-height: 2;
+  margin: 0;
+}
