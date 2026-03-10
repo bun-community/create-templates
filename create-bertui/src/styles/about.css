@@ -1,0 +1,68 @@
+/* src/styles/about.css */
+.about-container {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.about-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.about-features {
+  margin: 3rem 0;
+}
+
+.about-features h2 {
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.feature-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.feature-item h3 {
+  margin-bottom: 1rem;
+}
+
+.feature-item p {
+  color: #888;
+}
+
+.about-cta {
+  margin-top: 3rem;
+}
+
+.btn-back {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-back:hover {
+  border-color: #f472b6;
+  color: #f472b6;
+}

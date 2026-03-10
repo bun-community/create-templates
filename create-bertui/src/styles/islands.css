@@ -1,0 +1,240 @@
+/* Basic Reset and Variables */
+:root {
+  --color-primary: #007bff; /* BertUI blue */
+  --color-secondary: #6c757d;
+  --color-success: #28a745;
+  --color-danger: #dc3545;
+  --color-background: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-text: #212529;
+  --color-code-bg: #e9ecef;
+  --color-badge-bg: #ffc107;
+  --color-badge-text: #343a40;
+  --spacing-unit: 1rem;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Container */
+.islands-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: calc(var(--spacing-unit) * 2);
+}
+
+/* Headings and Text */
+.islands-title {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: var(--spacing-unit);
+}
+
+.islands-lead {
+  font-size: 1.25rem;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  color: var(--color-secondary);
+}
+
+.islands-section h2 {
+  font-size: 1.75rem;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 0.5rem;
+  margin-top: calc(var(--spacing-unit) * 3);
+  margin-bottom: var(--spacing-unit);
+}
+
+.islands-section h3 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: var(--color-primary);
+}
+
+p {
+  margin-bottom: var(--spacing-unit);
+}
+
+ul {
+  padding-left: calc(var(--spacing-unit) * 1.5);
+  margin-bottom: var(--spacing-unit);
+}
+
+/* Badge */
+.islands-badge {
+  display: inline-block;
+  background-color: var(--color-badge-bg);
+  color: var(--color-badge-text);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-unit);
+}
+
+/* Code Block */
+.code-block {
+  background-color: var(--color-code-bg);
+  padding: var(--spacing-unit);
+  border-radius: 0.25rem;
+  overflow-x: auto;
+  font-family: monospace;
+  white-space: pre;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+/* Grid Layouts */
+.islands-grid, .results-grid {
+  display: grid;
+  gap: var(--spacing-unit);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+/* Use 2 columns for the good/bad grid on larger screens */
+.islands-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Good/Bad Boxes */
+.box {
+  background-color: var(--color-surface);
+  padding: var(--spacing-unit);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid;
+}
+
+.box-good {
+  border-left-color: var(--color-success);
+}
+
+.box-good h3 {
+  color: var(--color-success);
+}
+
+.box-bad {
+  border-left-color: var(--color-danger);
+}
+
+.box-bad h3 {
+  color: var(--color-danger);
+}
+
+.box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.box-good li::before {
+  content: "👍 ";
+  margin-right: 0.5rem;
+}
+
+.box-bad li::before {
+  content: "👎 ";
+  margin-right: 0.5rem;
+}
+
+/* Results Grid (3 columns) */
+.results-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  text-align: center;
+}
+
+.result-card {
+  background-color: var(--color-surface);
+  padding: calc(var(--spacing-unit) * 1.5);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.result-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.result-label {
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Call to Action (CTA) */
+.islands-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: calc(var(--spacing-unit) * 3);
+  padding-top: var(--spacing-unit);
+  border-top: 1px solid #dee2e6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+  text-align: center;
+}
+
+.btn-back {
+  background-color: var(--color-secondary);
+  color: var(--color-surface);
+}
+
+.btn-back:hover {
+  background-color: #5a6268;
+}
+
+.btn-docs {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.btn-docs:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .islands-container {
+    padding: var(--spacing-unit);
+  }
+
+  .islands-title {
+    font-size: 2rem;
+  }
+
+  .islands-lead {
+    font-size: 1rem;
+  }
+
+  .islands-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .islands-cta {
+    flex-direction: column;
+    gap: var(--spacing-unit);
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+}
